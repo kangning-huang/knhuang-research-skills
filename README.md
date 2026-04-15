@@ -1,6 +1,6 @@
 # Lu Lab Research Skills
 
-9 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review. Verb-first naming, shareable across the lab group.
+10 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review. Verb-first naming, shareable across the lab group.
 
 Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Environmental Studies.
 
@@ -17,6 +17,7 @@ Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Env
 | `/check-facts` | Verify empirical claims via web search, insert source URLs | Quality |
 | `/manage-refs` | DOI-verified citations: CrossRef resolve, `refs.bib`, validate pools | Quality |
 | `/visualize-blackbox` | Design diagnostic figures so outsiders can evaluate the analysis | Analysis |
+| `/roast-figure` | Adversarial figure QA: legend swaps, color errors, axis failures, arithmetic — caught before anyone sees it | Analysis |
 | `/launch-project` | Scaffold a new research project: `method.md` + `agenda.md` + Big 5 structure | Start project |
 | `/find-redflag` | Adversarial review: find what Reviewer #2 would attack | Quality |
 
@@ -35,7 +36,7 @@ Quality pipeline:
   check-facts ──→ manage-refs ──→ find-redflag
 
 Analysis:
-  visualize-blackbox (standalone, any phase)
+  visualize-blackbox ──→ [generate figures] ──→ roast-figure
 ```
 
 ---
@@ -62,7 +63,7 @@ cp -R skills/* ~/.claude/skills/
 
 ### Verify
 
-Open Claude Code and type `/` — you should see the 9 skills listed.
+Open Claude Code and type `/` — you should see the 10 skills listed.
 
 ---
 
