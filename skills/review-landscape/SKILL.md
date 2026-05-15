@@ -93,21 +93,21 @@ Write initial metadata to `search-log.md`:
 
 ## Phase 1: Local Inventory Search (Haiku, parallel — if available)
 
-Many Lu Lab members maintain personal markdown inventories (e.g., a `bib_inventory.md`, an `idea_inventory.md`, a `name_inventory.md`). If any exist in the working tree, grep them first — local knowledge beats web search.
+If the working tree contains markdown index files (e.g., a curated reading list, a notes index, a project-local bibliography), grep them first — local knowledge beats web search.
 
 **Detection**:
 ```bash
-find . -maxdepth 4 -type f -name "*inventory*.md" 2>/dev/null
+find . -maxdepth 4 -type f \( -name "*inventory*.md" -o -name "*index*.md" -o -name "references.md" -o -name "reading-list.md" \) 2>/dev/null
 ```
 
-If files are found, dispatch **one Haiku 4.5 subagent per inventory file**. Each subagent:
-- Greps the inventory for topic keywords [K1, K2, K3].
+If files are found, dispatch **one Haiku 4.5 subagent per file**. Each subagent:
+- Greps the file for topic keywords [K1, K2, K3].
 - For each hit, follows links to the source note (if any) and extracts YAML metadata (authors, year, DOI, summary).
 - Returns: at most 20 hits sorted by relevance.
 
-**Aggregation**: collect all results. Append to search log. If all subagents return 0 hits, flag: **"Field is cold in local inventory — weight Phase 2 web coverage heavier."**
+**Aggregation**: collect all results. Append to search log. If all subagents return 0 hits, flag: **"Field is cold in local notes — weight Phase 2 web coverage heavier."**
 
-**If no inventory files exist**: log "No local inventory — web-first mode" in search log, skip Phase 1, proceed to Phase 2.
+**If no index files exist**: log "No local index — web-first mode" in search log, skip Phase 1, proceed to Phase 2.
 
 **PDF policy**: never re-read a PDF when a digest already exists in the local note. Trust prior summaries.
 
