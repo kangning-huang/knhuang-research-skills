@@ -1,6 +1,6 @@
 # Lu Lab Research Skills
 
-10 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review. Verb-first naming, shareable across the lab group.
+11 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review. Verb-first naming, shareable across the lab group.
 
 Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Environmental Studies.
 
@@ -14,6 +14,7 @@ Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Env
 | `/end-session` | Capture reusable learnings to memory before `/clear` | End session |
 | `/read-ken` | Paper → pop-science summary (Kangning Huang method) | Literature |
 | `/trace-origin` | Trace a paper's deepest intellectual roots | Literature |
+| `/review-landscape` | Field reconnaissance: 8-dimension landscape map + gap table ranked by your research pillars | Literature |
 | `/check-facts` | Verify empirical claims via web search, insert source URLs | Quality |
 | `/manage-refs` | DOI-verified citations: CrossRef resolve, `refs.bib`, validate pools | Quality |
 | `/visualize-blackbox` | Design diagnostic figures so outsiders can evaluate the analysis | Analysis |
@@ -30,7 +31,7 @@ Session lifecycle:
   launch-project ──→ update-me ──→ [work] ──→ end-session
 
 Literature pipeline:
-  read-ken ──→ trace-origin (enrichment layer)
+  review-landscape ──→ read-ken ──→ trace-origin (enrichment layer)
 
 Quality pipeline:
   check-facts ──→ manage-refs ──→ find-redflag
@@ -63,7 +64,7 @@ cp -R skills/* ~/.claude/skills/
 
 ### Verify
 
-Open Claude Code and type `/` — you should see the 10 skills listed.
+Open Claude Code and type `/` — you should see the 11 skills listed.
 
 ---
 
