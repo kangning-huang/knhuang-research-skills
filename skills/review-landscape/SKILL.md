@@ -356,4 +356,6 @@ Target parallelism:
 
 ## Upstream / Provenance
 
-Forked from `joshzyj/open-scholar-skill` (scholar-lit-review), adapted for the Lu Lab research stack. Personal-edge ranking is configurable per user; the upstream's sociology/demography defaults have been replaced with the five Lu Lab domains.
+Adapted from the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj) · [joshzyj.github.io](https://joshzyj.github.io/)). This skill reworks part of that upstream — the sociology/demography defaults are replaced with the Lu Lab's five domains and the gap ranking is made configurable — but the core field-reconnaissance design is Yongjun's. Thank you.
+
+The upstream is released under the **Open Scholar Skill License (Academic Use)**: free for academic, educational, and non-commercial research; commercial use requires the author's written permission. Its copyright and permission notice is retained in [`NOTICE`](./NOTICE) and travels with this skill.

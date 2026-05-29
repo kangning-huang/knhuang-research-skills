@@ -121,6 +121,12 @@ PRs welcome from lab members. To propose a new skill:
 
 ---
 
+## Acknowledgments
+
+`/review-landscape` is adapted from the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj)) — reworked for the Lu Lab's fields. Thanks for the open-source work it builds on.
+
+---
+
 ## License
 
-MIT
+MIT — **except** `skills/review-landscape/`, which is adapted from open-scholar-skill (Yongjun Zhang) and remains under its **Open Scholar Skill License (Academic Use)**: free for academic, educational, and non-commercial research; commercial use requires the upstream author's written permission. See [`skills/review-landscape/NOTICE`](skills/review-landscape/NOTICE).
