@@ -125,7 +125,7 @@ PRs welcome from lab members. To propose a new skill:
 
 `/review-landscape` is a **fork** of the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj)). Its 8-dimension landscape-map framework and search→map→verify pipeline are his; the Lu Lab retargeted the domains, swapped in a comparative-advantage gap ranking, and limited it to scouting. Kept under his **Open Scholar Skill License (Academic Use)** — see [`skills/review-landscape/NOTICE`](skills/review-landscape/NOTICE). Thank you, Yongjun.
 
-`/read-ken` is built on a science-writing prompt developed by **[Kangning Huang](https://knhuang.weebly.com)** — the "Ken" the skill is named for. His "ladder-building" approach (start from what the reader knows, then build up step by step) is the method; this suite compiles it into a repeatable workflow. Thank you, Kangning.
+`/read-ken` is built on a science-writing prompt developed by **[Kangning Huang](https://knhuang.weebly.com)** — the "Ken" the skill is named for. His "ladder-building" approach (start from what the reader knows, then build up step by step) is the method; this suite compiles it into a repeatable workflow. Thank you, Ken.
 
 ---
 
