@@ -12,7 +12,7 @@ Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Env
 |-------|--------------|-------|
 | `/update-me` | Warm-up briefing: where we left off, what's next | Start session |
 | `/end-session` | Capture reusable learnings to memory before `/clear` | End session |
-| `/read-ken` | Paper → pop-science summary (Kangning Huang method) | Literature |
+| `/read-ken` | Paper → pop-science summary (built on [Kangning Huang](https://knhuang.weebly.com)'s prompt) | Literature |
 | `/trace-origin` | Trace a paper's deepest intellectual roots | Literature |
 | `/review-landscape` | Field reconnaissance: 8-dimension landscape map + gap table ranked by your research pillars | Literature |
 | `/check-facts` | Verify empirical claims via web search, insert source URLs | Quality |
@@ -124,6 +124,8 @@ PRs welcome from lab members. To propose a new skill:
 ## Acknowledgments
 
 `/review-landscape` is a **fork** of the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj)). Its 8-dimension landscape-map framework and search→map→verify pipeline are his; the Lu Lab retargeted the domains, swapped in a comparative-advantage gap ranking, and limited it to scouting. Kept under his **Open Scholar Skill License (Academic Use)** — see [`skills/review-landscape/NOTICE`](skills/review-landscape/NOTICE). Thank you, Yongjun.
+
+`/read-ken` is built on a science-writing prompt developed by **[Kangning Huang](https://knhuang.weebly.com)** — the "Ken" the skill is named for. His "ladder-building" approach (start from what the reader knows, then build up step by step) is the method; this suite compiles it into a repeatable workflow. Thank you, Kangning.
 
 ---
 
