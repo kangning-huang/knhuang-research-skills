@@ -356,6 +356,8 @@ Target parallelism:
 
 ## Upstream / Provenance
 
-Adapted from the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj) · [joshzyj.github.io](https://joshzyj.github.io/)). This skill reworks part of that upstream — the sociology/demography defaults are replaced with the Lu Lab's five domains and the gap ranking is made configurable — but the core field-reconnaissance design is Yongjun's. Thank you.
+**This skill is a fork of the `scholar-lit-review` skill in [open-scholar-skill](https://github.com/joshzyj/open-scholar-skill) by [Yongjun Zhang](https://github.com/joshzyj)** ([@joshzyj](https://github.com/joshzyj) · [joshzyj.github.io](https://joshzyj.github.io/)). The core design is his: the 8-dimension landscape map (field evolution → theoretical landscape → established / contested / null findings → mechanisms inventory → methodological landscape → research gaps → theory handoff) and the search → map → verify pipeline.
 
-The upstream is released under the **Open Scholar Skill License (Academic Use)**: free for academic, educational, and non-commercial research; commercial use requires the author's written permission. Its copyright and permission notice is retained in [`NOTICE`](./NOTICE) and travels with this skill.
+What the Lu Lab changed for its use case: retargeted from social science to five domains (complexity, urban, urban-sustainability, industrial ecology, economic geography); swapped the gap ranking from publication-potential to a configurable **comparative-advantage** test scored against the user's own research pillars (elicited per run, not hard-coded); restricted scope to scouting (no review-draft writing); and rewired the handoffs to Lu Lab skills. Thank you, Yongjun.
+
+Released under Yongjun's **Open Scholar Skill License (Academic Use)**: free for academic, educational, and non-commercial research; commercial use requires his written permission. The full copyright and permission notice is retained in [`NOTICE`](./NOTICE) and travels with this skill.
