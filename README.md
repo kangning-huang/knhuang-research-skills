@@ -1,6 +1,6 @@
 # Lu Lab Research Skills
 
-11 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review. Verb-first naming, shareable across the lab group.
+11 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review — plus a generate-and-test harness that fires those reviews automatically. Verb-first naming, shareable across the lab group.
 
 Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Environmental Studies.
 
@@ -39,6 +39,18 @@ Quality pipeline:
 Analysis:
   visualize-blackbox ──→ [generate figures] ──→ roast-figure
 ```
+
+---
+
+## Workflows
+
+Beyond the slash-command skills, the repo ships a **harness** — automation that wires the skills together.
+
+| Workflow | What it does |
+|----------|--------------|
+| [`generate-and-test`](workflows/generate-and-test/) | Git hooks that auto-fire the right review skill (`/code-review`, `/find-redflag`, `/check-facts`, `/roast-figure`) the moment an AI writes code, prose, or a figure — and block `git commit` until each artifact has been reviewed. Quality becomes a reflex, not a thing you remember. |
+
+Install separately (after the skills): `cd workflows/generate-and-test && ./install.sh`
 
 ---
 
