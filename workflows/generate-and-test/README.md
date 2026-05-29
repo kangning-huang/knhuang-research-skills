@@ -4,7 +4,17 @@ A hook-based harness that makes quality checks **automatic** instead of remember
 
 ## Philosophy
 
-Newell & Simon's *generate-and-test* is a classic weak method: generate a candidate, test it against the goal. With AI assistance the model is the **generator**; your review skills (`/code-review`, `/find-redflag`, `/check-facts`, `/manage-refs`, `/roast-figure`) are the **test**. The problem was never a missing test — it was that running it depended on remembering. This harness makes the test a **reflex**: the harness fires it, not goodwill.
+*Generate-and-test* is a classic weak method: generate a candidate, test it against the goal. With AI assistance the model is the **generator**; your review skills (`/code-review`, `/find-redflag`, `/check-facts`, `/manage-refs`, `/roast-figure`) are the **test**. The problem was never a missing test. It was that running it depended on remembering. This harness makes the test a **reflex**: the harness fires it, not goodwill.
+
+### Intellectual lineage
+
+The pattern is old and well-proven:
+
+- **Allen Newell and Herbert A. Simon** named *generate-and-test* a "weak method" of problem solving: generate candidates, test each against the goal.
+- **Gerald Jay Sussman**, in *HACKER* (*A Computer Model of Skill Acquisition*, 1975), solved problems by **debugging almost-right plans**, and introduced *critics* — watchers that monitor a forming plan for known bug-patterns. Generate, test, debug.
+- **Barto, Sutton, and Anderson** (1983) made the loop adaptive with the **actor–critic**: an actor proposes actions, a critic evaluates them. Sutton and Barto's reinforcement-learning framework later generalized it.
+
+This harness is the same shape with one twist: the generator is an AI, and the **critic is a fixed, expert review skill** rather than a learned value function. The skills were always the test. The harness just makes running them a reflex instead of a thing you remember.
 
 ## The dispatch table (output type → test)
 
