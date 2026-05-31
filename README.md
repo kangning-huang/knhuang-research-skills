@@ -1,6 +1,6 @@
 # Lu Lab Research Skills
 
-11 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review — plus a generate-and-test harness that fires those reviews automatically. Verb-first naming, shareable across the lab group.
+13 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review — plus a generate-and-test harness that fires those reviews automatically. Verb-first naming, shareable across the lab group.
 
 Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Environmental Studies.
 
@@ -21,6 +21,8 @@ Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Env
 | `/roast-figure` | Adversarial figure QA: legend swaps, color errors, axis failures, arithmetic — caught before anyone sees it | Analysis |
 | `/launch-project` | Scaffold a new research project: `method.md` + `agenda.md` + Big 5 structure | Start project |
 | `/find-redflag` | Adversarial review: find what Reviewer #2 would attack | Quality |
+| `/abt-narrative-critique` | Evaluate proposals/papers using And-But-Therefore storytelling framework (Olson) | Quality |
+| `/abt-narrative-critique-zh` | ABT叙事结构评估工具 — Chinese-language variant for NSFC proposals and Chinese journals | Quality |
 
 ---
 
@@ -35,6 +37,7 @@ Literature pipeline:
 
 Quality pipeline:
   check-facts ──→ manage-refs ──→ find-redflag
+  abt-narrative-critique (standalone, or after drafting intro/abstract)
 
 Analysis:
   visualize-blackbox ──→ [generate figures] ──→ roast-figure
@@ -126,6 +129,8 @@ PRs welcome from lab members. To propose a new skill:
 `/review-landscape` is a **fork** of the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj)). Its 8-dimension landscape-map framework and search→map→verify pipeline are his; the Lu Lab retargeted the domains, swapped in a comparative-advantage gap ranking, and limited it to scouting. Kept under his **Open Scholar Skill License (Academic Use)** — see [`skills/review-landscape/NOTICE`](skills/review-landscape/NOTICE). Thank you, Yongjun.
 
 `/read-ken` is built on a science-writing prompt developed by **[Kangning Huang](https://knhuang.weebly.com)** — the "Ken" the skill is named for. His "ladder-building" approach (start from what the reader knows, then build up step by step) is the method; this suite compiles it into a repeatable workflow. Thank you, Ken.
+
+`/abt-narrative-critique` and `/abt-narrative-critique-zh` apply the And-But-Therefore storytelling framework from Randy Olson's *Houston, We Have a Narrative* to evaluate scientific writing. Originally developed in **[Kangning Huang](https://knhuang.weebly.com)**'s [science_narrative_skills](https://github.com/kangning-huang/science_narrative_skills) repo and merged here to consolidate all research skills in one suite.
 
 ---
 
