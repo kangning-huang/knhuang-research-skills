@@ -1,8 +1,8 @@
-# Lu Lab Research Skills
+# Kangning Huang Research Skills
 
-13 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review — plus a generate-and-test harness that fires those reviews automatically. Verb-first naming, shareable across the lab group.
+16 Claude Code skills for the research lifecycle — from paper-reading to grant-writing to adversarial review — plus narrative transformation tools for understanding and communicating science.
 
-Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Environmental Studies.
+Built by [Kangning Huang](https://kangning-huang.github.io/main/). Forked from the [Lu Lab Research Skills](https://github.com/MingzhenLu/lulab-research-skills) by [Mingzhen Lu](https://www.mingzhenlu-lab.com).
 
 ---
 
@@ -12,10 +12,12 @@ Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Env
 |-------|--------------|-------|
 | `/update-me` | Warm-up briefing: where we left off, what's next | Start session |
 | `/end-session` | Capture reusable learnings to memory before `/clear` | End session |
-| `/read-ken` | Paper → pop-science summary (built on [Kangning Huang](https://knhuang.weebly.com)'s prompt) | Literature |
+| `/read-ken` | Paper → pop-science summary (ladder-building approach) | Literature |
 | `/trace-origin` | Trace a paper's deepest intellectual roots | Literature |
 | `/review-landscape` | Field reconnaissance: 8-dimension landscape map + gap table ranked by your research pillars | Literature |
+| `/gladwell-interpreter` | Transform papers into Gladwell-style narratives — for rapid understanding or public communication | Literature / Communication |
 | `/check-facts` | Verify empirical claims via web search, insert source URLs | Quality |
+| `/causal-evidence-analyzer` | Evaluate causal claims using evidence hierarchy (RCT → observational) | Quality |
 | `/manage-refs` | DOI-verified citations: CrossRef resolve, `refs.bib`, validate pools | Quality |
 | `/visualize-blackbox` | Design diagnostic figures so outsiders can evaluate the analysis | Analysis |
 | `/roast-figure` | Adversarial figure QA: legend swaps, color errors, axis failures, arithmetic — caught before anyone sees it | Analysis |
@@ -23,6 +25,7 @@ Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Env
 | `/find-redflag` | Adversarial review: find what Reviewer #2 would attack | Quality |
 | `/abt-narrative-critique` | Evaluate proposals/papers using And-But-Therefore storytelling framework (Olson) | Quality |
 | `/abt-narrative-critique-zh` | ABT叙事结构评估工具 — Chinese-language variant for NSFC proposals and Chinese journals | Quality |
+| `/make-reading-guide` | Generate structured reading guides for papers | Literature |
 
 ---
 
@@ -32,15 +35,23 @@ Built by [Mingzhen Lu](https://www.mingzhenlu-lab.com) and the Lu Lab at NYU Env
 Session lifecycle:
   launch-project ──→ update-me ──→ [work] ──→ end-session
 
-Literature pipeline:
-  review-landscape ──→ read-ken ──→ trace-origin (enrichment layer)
+Literature pipeline (understanding):
+  review-landscape ──→ read-ken ──→ trace-origin
+                           │
+                           └──→ gladwell-interpreter (rapid deep-dive on new topics)
 
 Quality pipeline:
-  check-facts ──→ manage-refs ──→ find-redflag
-  abt-narrative-critique (standalone, or after drafting intro/abstract)
+  check-facts ──┬──→ causal-evidence-analyzer (for causal claims)
+                │
+                └──→ manage-refs ──→ find-redflag ──→ abt-narrative-critique
 
 Analysis:
   visualize-blackbox ──→ [generate figures] ──→ roast-figure
+
+Communication pipeline (after publication):
+  [published paper] ──→ gladwell-interpreter (public article)
+                              │
+                              └──→ check-facts (verify simplified claims)
 ```
 
 ---
@@ -64,8 +75,8 @@ Requires [Claude Code](https://claude.com/claude-code) installed.
 ### Option 1: Symlink (recommended — auto-updates on `git pull`)
 
 ```bash
-git clone https://github.com/MingzhenLu/lulab-research-skills.git
-cd lulab-research-skills
+git clone https://github.com/kangning-huang/knhuang-research-skills.git
+cd knhuang-research-skills
 ./scripts/install.sh
 ```
 
@@ -79,7 +90,7 @@ cp -R skills/* ~/.claude/skills/
 
 ### Verify
 
-Open Claude Code and type `/` — you should see the 11 skills listed.
+Open Claude Code and type `/` — you should see the 16 skills listed.
 
 ---
 
@@ -126,11 +137,17 @@ PRs welcome from lab members. To propose a new skill:
 
 ## Acknowledgments
 
-`/review-landscape` is a **fork** of the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj)). Its 8-dimension landscape-map framework and search→map→verify pipeline are his; the Lu Lab retargeted the domains, swapped in a comparative-advantage gap ranking, and limited it to scouting. Kept under his **Open Scholar Skill License (Academic Use)** — see [`skills/review-landscape/NOTICE`](skills/review-landscape/NOTICE). Thank you, Yongjun.
+This repo is forked from **[lulab-research-skills](https://github.com/MingzhenLu/lulab-research-skills)** by **[Mingzhen Lu](https://www.mingzhenlu-lab.com)** and the Lu Lab at NYU Environmental Studies. The original suite's architecture, verb-first naming, and many skills originate there.
 
-`/read-ken` is built on a science-writing prompt developed by **[Kangning Huang](https://knhuang.weebly.com)** — the "Ken" the skill is named for. His "ladder-building" approach (start from what the reader knows, then build up step by step) is the method; this suite compiles it into a repeatable workflow. Thank you, Ken.
+`/review-landscape` is a **fork** of the `scholar-lit-review` skill in **[open-scholar-skill](https://github.com/joshzyj/open-scholar-skill)** by **Yongjun Zhang** ([@joshzyj](https://github.com/joshzyj)). Its 8-dimension landscape-map framework and search→map→verify pipeline are his. Kept under his **Open Scholar Skill License (Academic Use)** — see [`skills/review-landscape/NOTICE`](skills/review-landscape/NOTICE).
 
-`/abt-narrative-critique` and `/abt-narrative-critique-zh` apply the And-But-Therefore storytelling framework from Randy Olson's *Houston, We Have a Narrative* to evaluate scientific writing. Originally developed in **[Kangning Huang](https://knhuang.weebly.com)**'s [science_narrative_skills](https://github.com/kangning-huang/science_narrative_skills) repo and merged here to consolidate all research skills in one suite.
+`/read-ken` uses a "ladder-building" approach (start from what the reader knows, then build up step by step) for science communication.
+
+`/abt-narrative-critique` and `/abt-narrative-critique-zh` apply the And-But-Therefore storytelling framework from Randy Olson's *Houston, We Have a Narrative* to evaluate scientific writing.
+
+`/gladwell-interpreter` transforms academic papers into Malcolm Gladwell-style narratives, useful for (1) rapidly understanding new topics and (2) writing public-facing articles from published research.
+
+`/causal-evidence-analyzer` evaluates causal claims by ranking evidence from meta-analyses of RCTs (strongest) down to observational correlations (weakest), applying core causal inference concepts like confounding, reverse causation, and selection bias.
 
 ---
 
