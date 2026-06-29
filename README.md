@@ -26,6 +26,7 @@ Built by [Kangning Huang](https://kangning-huang.github.io/main/). Forked from t
 | `/abt-narrative-critique` | Evaluate proposals/papers using And-But-Therefore storytelling framework (Olson) | Quality |
 | `/abt-narrative-critique-zh` | ABT叙事结构评估工具 — Chinese-language variant for NSFC proposals and Chinese journals | Quality |
 | `/make-reading-guide` | Generate structured reading guides for papers | Literature |
+| `/chaining-transitions` | Make prose flow with known-new chaining (each sentence's tail seeds the next sentence's head) — distilled from Ken's NASA proposal | Writing |
 
 ---
 
